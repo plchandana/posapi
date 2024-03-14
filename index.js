@@ -1,4 +1,6 @@
 const express = require("express");
+const cors = require('cors');
+
 const dotenv = require("dotenv");
 
 //express app
@@ -13,7 +15,7 @@ dotenv.config();
 const PORT = 3000;
 
 app.use(express.static("public"))
-
+app.use(cors());
 //mongoose
 const mongoose = require("mongoose");
 
